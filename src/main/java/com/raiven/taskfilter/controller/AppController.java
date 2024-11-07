@@ -1,4 +1,4 @@
-package com.raiven.taskfilter;
+package com.raiven.taskfilter.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -44,11 +44,10 @@ public class AppController implements Initializable {
 		taskNameColumn.setCellValueFactory(new PropertyValueFactory<>("taskName"));
 		statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 		
-		
 	}
 	
 	@FXML
-	private void sort() {
+	private void filter() {
 		String selectedItem = selectValueComboBox.getSelectionModel().getSelectedItem();
 		database.filter(selectedItem);
 	}
